@@ -1,4 +1,4 @@
-**Création des documents Web**
+**Création des documents Web: Projet 01: Le Traditionnel**
 ---
 **Consignes**
 
