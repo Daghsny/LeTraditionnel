@@ -65,16 +65,7 @@ if(test==false)
     }
     return true
 }
-function heureR(){
-    h=document.getElementById("time").value
-    hh=h[0]+h[1]
-    if(hh<7 || hh>19)
-    {
-        alert("Vérifier l'heure de la réservation")
-        return false
-    }
-    return true
-}
+
 function nombrePersonne(){
     nomEspace=document.getElementById("esp").value
     nbPersonne=document.getElementById("nbp").value
