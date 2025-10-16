@@ -1,5 +1,5 @@
 **Création des documents Web**
-
+---
 **Consignes**
 
 1. *Toutes les fonctions JavaScript doivent être enregistrées dans un fichier nommé "mesControles.js".*
@@ -7,7 +7,7 @@
 3. *Toutes les pages HTML doivent être reliées au fichier "mesStyles.css".*
 4. *Les pages "reservation.html" et "commande.html" doivent être reliées au fichier "mesControles.js".*
 5. *Le clic sur le bouton "Annuler" de chaque formulaire à créer, permet d’initialiser les champs.*
-
+---
 **Création de la page index du site**
 
 - **html**
