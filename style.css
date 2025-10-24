@@ -206,42 +206,35 @@ footer {
     color: chartreuse;
     opacity: 1;
 }
+
 /*style page commander*/
 
-#formulaire img{
-    width: 50px;
-    height: 50px;;
+.produit img {
+  width: 80px;
+  /* height: 50px; */
+  border-radius: 15px;
+  transition: transform 0.7s ease;
+  margin-right: 30px;
 }
 
-input[type=range]{
-width: 200px;
-margin-top: 0px;
+.produit img:hover {
+  transform: scale(1.2);
 }
-span{
-    margin-right: 30px;
-    height: 2px;
-    position: relative;
-    top:-20px
+
+.produit {
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: -5px 2px 2px red;
+}
+
+.produit input {
+  width: 20px;
+}
+
+.produit label {
+  display: inline-block;
+  width: 100px;
 }
 
 
-#formulaire input[type=checkbox],#formulaire input[type=number],#formulaire input[type=radio],#formulaire select{
-    width: 40px;
-}
-.EauText{
-    margin-left: 20px;
-    display: inline-block;
-    width: 150px;
-}
-#radio{
-    display: inline-block;
-}
-
-.produit{
-    border: #5d4037 solid 0.5px;
-    box-shadow: -5px 0px 2px green;
-    margin-bottom: 20px;
-    width: 100%;
-    border-radius: 10px;
-    padding: 20px;
-}
