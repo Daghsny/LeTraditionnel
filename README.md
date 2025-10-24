@@ -1,3 +1,8 @@
+**Web Shared Components**
+
+Link To Picture : 
+<a href="https://drive.google.com/drive/folders/14c3_FmQGSbqMBhNC6bR3DUP2nV4GGIHk?usp=drive_link">Click Here</a>
+
 **Création des documents Web: Projet 01: Le Traditionnel**
 ---
 **Consignes**
