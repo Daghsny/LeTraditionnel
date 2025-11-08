@@ -91,7 +91,7 @@ function verif(){
     return nom() && mail() && telephone() && dateR() && heureR() && nombrePersonne()
 }
 
-*/Fonction de la page Commander*/
+/* Fonction de la page Commander */
 
 function choix() {
   if (document.getElementById("cafeE").checked == false) {
