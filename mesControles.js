@@ -90,3 +90,81 @@ function nombrePersonne(){
 function verif(){
     return nom() && mail() && telephone() && dateR() && heureR() && nombrePersonne()
 }
+
+*/Fonction de la page Commander*/
+
+function choix() {
+  if (document.getElementById("cafeE").checked == false) {
+    document.getElementById("QteE").value = 0
+    document.getElementById("QteE").disabled = true
+  } else {
+    document.getElementById("QteE").disabled = false
+    document.getElementById("QteE").value = 1
+  }
+
+
+  if (document.getElementById("eau").selectedIndex == 0) {
+    document.getElementById("QteEau").value = 0
+    document.getElementById("QteEau").disabled = true
+  } else {
+    document.getElementById("QteEau").disabled = false
+    document.getElementById("QteEau").value = 1
+
+  }
+  if (document.getElementsByName("gaz")[0].checked == document.getElementsByName("gaz")[1].checked) {
+    document.getElementById("QteGa").value = 0
+    document.getElementById("QteGa").disabled = true
+  } else {
+    document.getElementById("QteGa").disabled = false
+    document.getElementById("QteGa").value = 1
+
+  }
+
+
+  if (document.getElementById("sand").checked == false) {
+    document.getElementById("QteS").value = 0
+    document.getElementById("QteS").disabled = true
+    document.getElementById("spicy").disabled = true
+    document.getElementById("s1").style.color = "black"
+    document.getElementById("s2").style.color = "black"
+    document.getElementById("s3").style.color = "black"
+    document.getElementById("s4").style.color = "black"
+  } else {
+    document.getElementById("QteS").disabled = false
+    document.getElementById("QteS").value = 1
+    document.getElementById("spicy").disabled = false
+
+  }
+
+
+}
+
+function spice() {
+  x = document.getElementById("spicy").value
+  if (x == 0) {
+    document.getElementById("s1").style.color = "red"
+    document.getElementById("s2").style.color = "black"
+    document.getElementById("s3").style.color = "black"
+    document.getElementById("s4").style.color = "black"
+  }
+  if (x == 1) {
+    document.getElementById("s1").style.color = "black"
+    document.getElementById("s2").style.color = "red"
+    document.getElementById("s3").style.color = "black"
+    document.getElementById("s4").style.color = "black"
+  }
+  if (x == 2) {
+    document.getElementById("s1").style.color = "black"
+    document.getElementById("s2").style.color = "black"
+    document.getElementById("s3").style.color = "red"
+    document.getElementById("s4").style.color = "black"
+  }
+  if (x == 3) {
+    document.getElementById("s1").style.color = "black"
+    document.getElementById("s2").style.color = "black"
+    document.getElementById("s3").style.color = "black"
+    document.getElementById("s4").style.color = "red"
+  }
+}
+
+
