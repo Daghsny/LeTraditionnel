@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander - Café Le Traditionnel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="mesControles.js"></script>
+</head>
+<body>
+    <div class="container">
+    <form id="formulaire">
+
+            <h1>Café Le Traditionnel</h1>
+            <h2>Commandez vos boissons et sandwichs préférés</h2>
+
+
+            <div class="produit">
+                <input type="checkbox"  id="cafeE" name="cafeE" value="4.5" onclick="choix()">
+                <img src="express.png" alt="café expresso">
+                <div class="EauText">Café expresso 4,50 dt</div>  
+                <div class="EauText">Prix 4,50 dt</div> 
+                Quantité : <input type="number" disabled id="QteE" min="1" max="10" value="0">
+            </div>
+
+            <div class="produit">
+                <div id="radio">
+                <input type="radio" id="gaz1" name="gaz" value="3.5" onclick="choix()">
+                <br>
+                <input type="radio" id="gaz2" name="gaz" value="3.5" onclick="choix()">
+                </div> 
+                   
+                <img src="gazeuse.jpg" alt="Eau Gazeuse">
+                <div class="EauText">
+                Canette 33cl  3,50 dt <br>
+                Bouteille 0.5l 4.20 dt
+                </div>
+                <div class="EauText">
+                Prix  3,50 dt <br>
+                Prix 4.20 dt
+                </div>
+                Quantite : <input type="number" disabled id="QteGa" min="0" max="20" value="0">
+            </div>
+
+            <div class="produit">
+                <select name="eau" id="eau" onchange="choix()">
+                        <option value="">--</option>
+                        <option value="">0.5L</option>
+                        <option value="">1.0L</option>
+                </select>
+                <img src="eau.png" alt="eau minerale">
+                <div class="EauText">
+                    Eau minérale 0.5L <br>
+                    Eau minérale 1.0L 
+                </div>
+                 <div class="EauText">
+                    Prix 2.5 dt <br>
+                    Prix 4.0 dt
+                 </div>
+                Quantité : <input type="number" disabled id="QteEau" min="1" max="10" value="0">
+            </div>
+
+             <div class="produit">
+                <input type="checkbox" id="sand" name="sand" value="9" onclick="choix()">
+                <img src="sandwich.jpg" alt="sandwich traditionnel">
+                <div class="EauText">Sandwich traditionnel </div> 
+                <div class="EauText">Prix : 9 dt</div>
+                Quantité : 
+                <input type="number" disabled id="QteS" min="1" max="10" value="0">
+                <br> <input type="range" disabled name="spicy" id="spicy" min="0" max="3" onclick="spice()">
+                    <div class="range">
+                        <span id="s1">Soft</span>
+                        <span id="s2">Normal</span>
+                        <span id="s3">Spicy</span>
+                        <span id="s4">Extra hot</span>
+                    </div>
+            </div>
+
+          
+        <input type="submit" value="Valider">          
+        <input type="reset" value="Annuler">
+        
+            
+            
+            
+      
+               
+                   
+                   
+            
+       
+       
+ 
+    </form>
+   </div>
+</body>
+</html>
