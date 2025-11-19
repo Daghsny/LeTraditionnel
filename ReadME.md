@@ -83,3 +83,93 @@ La page d’accueil est enregistrée dans votre dossier de travail sous le nom *
       - Espace 3 : capacité maximale 2 personnes
       - Espace 4 : capacité maximale 4 personnes
       - Espace 5 : capacité maximale 4 personnes
+
+
+
+4. **commande.html**
+   
+Créer la page " commande.html" tout en la reliant au fichier "mesStyles.css" afin de respecter la disposition ci-contre. Sachant que: 
+  - L’élément < h1 > contient le titre : Café Le Traditionnel
+  - L’élément < h2 > contient le texte : « Commandez vos boissons et sandwichs préférés »
+  - L’élément < section > contient un formulaire de commande comme présenté ci-dessus : <br>
+        - Quatre éléments **< div >** pour représenter des box pour des produits avec bordure de couleur Vert et arrondis aux côtés. Chacun contient un champs texte qui représente la quantité commandée de ce produit.
+
+      
+
+| **Element** | **Types d'élément du champ de saisie** | **Image** | **Libellé** | **Prix** |
+| --- | --- | --- | --- | -- |
+| Box 01 | CheckBox  | Image café | Café expresso | 4,500 dt | 
+| Box 02 | Boutons radio  (pour choisir entre deux types de boissons) | Image Boisson	| Canette 33cl Bouteille 0.5l	 | 3.500 dt 4.200 dt | 
+| Box 03 | Liste déroulante (pour choisir entre deux types de bouteille)	 | Image bouteille d’eau  |  	Eau minérale 0.5L   Eau minérale 1.0L	|  2.500 dt 4.000 dt  | 
+| Box 04 | Range (pour choisir entre Soft, Normal, Spicy et Extra hot)	 | Image Sandwich	 | Sandwich traditionnel	 | 9.500 dt | 
+
+
+**NB** : La zone de texte Quantité est désactivée par défaut et contient une valeur égale à Zéro. Suivant chaque box produit, elle sera active et obtient une valeur de 1 qui peut être incrémenter selon le choix de client.
+
+**Exemple** :   
+  - La zone texte de quantité dans le box 1 sera activer et contenant la valeur 1 après que le checkbox devant l’image du café avait été cocher.
+  - La zone texte de quantité dans le box 2 sera activer et contenant la valeur 1 après avoir sélectionner une des bouton radio.
+  - La zone texte de quantité dans le box 3 sera activer et contenant la valeur 1 après avoir sélectionner une des options du menu déroulant.
+  - La zone texte de quantité dans le box 4 et l’input de type range seront activer (La zone texte de quantité aura en plus la valeur 1) après que le checkbox devant l’image du sandwich avait été cocher.
+
+- b. Ajouter au fichier "**mesStyles.css**", les règles permettant d’appliquer aux éléments de cette page, les mises en forme spécifiées dans le tableau suivant :
+
+|Elément|	Mise en forme|
+| --- | --- |
+|**h1**	|Taille 24 pixel en gras|
+|**h2**	|Espacement en bas de 20 pixels
+||Couleur du texte : #5d4037|
+|**img** |	Largeur : 50px|
+||Hauteur : 50px|
+||	Lors du survol avec la souris au-dessous d’une image : L’image aura un effet de transformation de  scale de 1.5|
+|**div** |	Largeur 100%|
+||Un ombre vert horizontale de 5px verticale de 5px et propagation de 5px|
+||Border à angle arrondis de 5px|
+||Marge de 20px|
+||Padding de 20px |
+
+- c. Le clic sur le bouton Valider fait l’appel d’une fonction JavaScript nommé choix(), développée dans le fichier "mesControles.js" permettant de valider la commande.
+
+
+---
+
+<h2>Partie II : Création de la base de données </h2> 
+
+---
+Le concepteur du site utilise la base de données simplifiée intitulée Le_Traditionnel décrite par la représentation textuelle suivante : <br>
+- Client ( <u>email</u> , tel, nom) <br>
+- Réservation (<u>idReservation</u>, espace, numTable, email#, dateR, heureP, nbPersonnes) <br>
+- Produit (<u>idProduit</u>, nomProduit, prix, qteStock) <br>
+- Commande (<u>idCommande</u>, idReservation#) <br>
+- LigneCommande (<u>idCommande#</u>, <u>idProduit#</u>, qte, caracteristiques) <br>
+
+
+Les descriptions des différents champs sont présentées dans le tableau suivant :
+
+|Champs|Type|Description|Contrainte|
+| --- | --- | --- | --- |
+|email|	Chaine de 30 caractères|	Email d’un client|	Clé primaire|
+|tel	|Numérique de 8 chiffres	|Téléphone d’un client	||
+|nom	|Chaine de 20 caractères	|Nom d’un client||	
+|idReservation	|entier|	Identifiant d’une réservation	|Clé primaire auto-incrémenté|
+|espace|	Chaine de 10 caractères|	Nom d‘un espace	||
+|numTable	|Entier de 2 chiffres|	Numéro de table dans un espace	||
+|dateR	|Date |	Date d’une réservation	||
+|heureP	|heure|	Heure d’une réservation	||
+|nbPersonnes	|Entier de 2 chiffres	|Nombre de personnes pour une réservation||	
+|idProduit|	entier	|Identifiant d’un produit|	Clé primaire auto-incrémenté|
+|nomProduit	|Chaine de 20 caractères	|Nom d’un produit|	
+|prix	|décimale (10,3)|	Prix d’un produit|	Un réel strictement positif||
+|qteStock|	Entier de 3 chiffres|	Quantité de stock d’un produit	|Un entier positif|
+|idCommande	|entier	|Identifiant| d’une commande	|Clé primaire auto-incrémenté|
+|qte|	entier de 3 chiffres	|Quantité d’un produit commandée	|Un entier strictement positif|
+|caracteristiques|	Chaine de 40 caractères|	Caractéristiques d’un produit commandé	||
+
+
+    a.	Créer une base de données en lui attribuant le nom **TraditionnelBD** . 
+    b.	Créer les tables conformément à la représentation textuelle et aux descriptions des champs présentées dans le tableau. 
+    c.	Créer les relations entre les différentes tables. 
+    d.	Insérer les lignes suivantes dans les tables jardin et parcelle :
+    e.	Exporter cette base de données au format SQL dans votre dossier de travail.
+
+
